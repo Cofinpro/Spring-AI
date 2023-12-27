@@ -1,0 +1,18 @@
+### Query ChatGPT
+GET localhost:8080/chatgpt?message=hallo
+
+
+### Ingest data to simple vector store
+POST localhost:8080/rag/simple/ingest
+
+### RAG-Query using simple vector store
+GET localhost:8080/rag/simple?message=ultimate%20mountain%20bike
+
+
+### Ingest data to Elasticsearch
+POST localhost:8080/rag/elasticsearch/ingest
+
+### RAG-Query using Elasticsearch
+GET localhost:8080/rag/elasticsearch?message=ultimate%20mountain%20bike
+
+
