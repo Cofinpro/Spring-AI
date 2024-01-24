@@ -1,7 +1,7 @@
 package de.cofinpro.springai.retrieval_augmented_generation.elasticsearch;
 
 import de.cofinpro.springai.retrieval_augmented_generation.AbstractRetrievalAugmentedGenerationService;
-import org.springframework.ai.openai.client.OpenAiChatClient;
+import org.springframework.ai.openai.OpenAiChatClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
