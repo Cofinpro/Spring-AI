@@ -1,3 +1,7 @@
 spring:
   elasticsearch:
     uris: http://localhost:9200
+  ai:
+    azure:
+      openai:
+        api-key: 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
