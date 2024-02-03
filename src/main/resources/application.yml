@@ -2,6 +2,15 @@ spring:
   elasticsearch:
     uris: http://localhost:9200
   ai:
-    azure:
-      openai:
-        api-key: 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
+    openai:
+      api-key: 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
+      chat:
+        options:
+          temperature: 0.5
+          user: rubenspringai
+    vectorstore:
+      milvus:
+        client:
+          host: localhost
+          port: 56875
+

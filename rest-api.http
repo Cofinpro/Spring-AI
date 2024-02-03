@@ -5,6 +5,12 @@ GET localhost:8080/chatgpt?message=hallo
 ### Ingest data to simple vector store
 POST localhost:8080/rag/simple/ingest
 
+### Ingest data to simple vector store
+POST localhost:8080/rag/milvus/ingest
+
+### RAG-Query using milvus vector store
+GET localhost:8080/rag/milvus?message=ultimate%20mountain%20bike
+
 ### RAG-Query using simple vector store
 GET localhost:8080/rag/simple?message=ultimate%20mountain%20bike
 

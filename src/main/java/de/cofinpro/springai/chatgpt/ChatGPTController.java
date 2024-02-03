@@ -20,6 +20,6 @@ public class ChatGPTController {
 
     @GetMapping
     public String queryGpt(@RequestParam("message") String message) {
-        return openAiChatClient.generate(message);
+        return openAiChatClient.call(message);
     }
 }

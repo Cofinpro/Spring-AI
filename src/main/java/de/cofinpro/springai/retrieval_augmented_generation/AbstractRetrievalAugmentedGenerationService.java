@@ -1,10 +1,10 @@
 package de.cofinpro.springai.retrieval_augmented_generation;
 
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.openai.OpenAiChatClient;
-import org.springframework.ai.prompt.Prompt;
-import org.springframework.ai.prompt.SystemPromptTemplate;
-import org.springframework.ai.prompt.messages.UserMessage;
+import org.springframework.ai.chat.prompt.SystemPromptTemplate;
 import org.springframework.ai.reader.JsonReader;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.core.io.Resource;
@@ -45,6 +45,6 @@ public abstract class AbstractRetrievalAugmentedGenerationService {
         final var joinedDocuments = similarDocuments.stream().map(Document::getContent).collect(Collectors.joining("\n"));
         final var systemMessage = systemPromptTemplate.createMessage(Map.of("documents", joinedDocuments));
         final var prompt = new Prompt(List.of(systemMessage, new UserMessage(message)));
-        return openAiChatClient.generate(prompt).getGeneration().getContent();
+        return openAiChatClient.call(prompt).getResult().toString();
     }
 }
