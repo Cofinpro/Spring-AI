@@ -3,11 +3,11 @@ spring:
     uris: http://localhost:9200
   ai:
     openai:
-      api-key: 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
+      api-key:
       chat:
         options:
           temperature: 0.5
-          user: rubenspringai
+          user:
     vectorstore:
       milvus:
         client:

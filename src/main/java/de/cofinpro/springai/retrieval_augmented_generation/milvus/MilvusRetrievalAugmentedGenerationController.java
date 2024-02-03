@@ -4,8 +4,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-
 @RestController
 @RequestMapping("/rag/milvus")
 public class MilvusRetrievalAugmentedGenerationController {
@@ -18,12 +16,8 @@ public class MilvusRetrievalAugmentedGenerationController {
 
     @PostMapping("/ingest")
     public ResponseEntity<Void> ingestDocuments() {
-        try {
-            milvusRetrievalAugmentedGenerationService.ingestDocuments();
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (IOException e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        milvusRetrievalAugmentedGenerationService.ingestDocuments();
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping
