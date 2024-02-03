@@ -32,6 +32,10 @@ Dies geschieht mithilfe von `docker compose -f elasticsearch/docker-compose.yml 
 ### REST-Requests absetzen
 In der Datei rest-api.http sind mehrere REST-Requests dokumentiert. Diese können in IntelliJ per Klick aufgerufen werden
 
+### Milvus Vektordatenbank starten
+Damit die Anwendung mit der Vektordatenbank Milvus verwendet werden kann, muss per Docker oder minikube/helm eine Milvus instanz gestartet werden. Anschließend können host und port in der application.yml gesetzt werden.
+Durch die Konfiguration von milvus host & port werden alle notwendigen Beans von Spring-AI automatisch initialisiert
+
 ## Anfrage an ChatGPT
 Um eine Anfrage an ChatGPT zu stellen, kann der Endpunkt `GET localhost:8080/chatgpt?message=MeineAnfrage` aufgerufen werden.
 Die Anfrage wird über Spring AI direkt an ChatGPT weitergeleitet und das Ergebnis zurückgegeben.

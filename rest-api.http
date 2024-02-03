@@ -16,3 +16,11 @@ POST localhost:8080/rag/elasticsearch/ingest
 GET localhost:8080/rag/elasticsearch?message=ultimate%20mountain%20bike
 
 
+### Ingest data to milvus vector store
+POST localhost:8080/rag/milvus/ingest
+
+### RAG-Query using milvus vector store
+GET localhost:8080/rag/milvus?message=ultimate%20mountain%20bike
+
+
+

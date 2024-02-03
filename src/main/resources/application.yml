@@ -1,3 +1,16 @@
 spring:
   elasticsearch:
     uris: http://localhost:9200
+  ai:
+    openai:
+      api-key:
+      chat:
+        options:
+          temperature: 0.5
+          user:
+    vectorstore:
+      milvus:
+        client:
+          host: localhost
+          port: 56875
+
